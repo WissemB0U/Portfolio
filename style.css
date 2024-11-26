@@ -1,0 +1,321 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+header {
+  background-color: #f0f0f0;
+  width: 100%;
+  position: fixed;
+
+  /* z-index C'est l'élément qui me permet, lorsque je fais défiler (scroll), de garder le header toujours visible au-dessus */
+
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 200px;
+}
+
+.logo {
+  text-decoration: none;
+  color: #01030a;
+  text-transform: uppercase;
+  font-weight: 700;
+
+  /* J'utilise 'em' pour définir une taille de police relative à l'élément parent, assurant ainsi une mise en page flexible */
+
+  font-size: 1.8em;
+}
+
+.navigation a {
+  color: #01030a;
+  text-decoration: none;
+  font-size: 1.1em;
+  font-weight: 500;
+  padding-left: 30px;
+}
+
+.navigation a:hover {
+  color: #b10000;
+}
+
+section {
+  padding: 100px 200px;
+}
+
+.main {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-color: #080808;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+/* partie image */
+
+.main img {
+  max-width: 350px;
+  border-radius: 50%;
+  object-fit: cover;
+  position: absolute;
+  top: 30%;
+  right: 10%;
+  transition: 0.5s ease;
+}
+.main h2 span {
+  display: inline-block;
+  margin-top: 10px;
+  color: #c90909;
+  font-size: 1.8em;
+  font-weight: 600;
+}
+.main h3 {
+  color: #fcf9f9;
+  max-width: 600px;
+  font-size: 1.4em;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+.main-btn {
+  color: #fff;
+  background-color: #b10000;
+  text-decoration: none;
+  font-size: 1.1em;
+  font-weight: 600;
+  display: inline-block;
+  padding: 0.9375em 2.1875em;
+  letter-spacing: 1px;
+  border-radius: 15px;
+  margin-bottom: 40px;
+  transition: 0.7s ease;
+}
+
+.main-btn:hover {
+  background-color: #b10000;
+  transform: scale(1.1);
+}
+
+.social-icons {
+  color: #f0e7e7;
+  font-size: 1.7em;
+  padding-right: 30px;
+}
+
+/* partie des services*/
+
+.title {
+  display: flex;
+  justify-content: center;
+  color: #b10000;
+  font-size: 2.2em;
+  font-weight: 800;
+  margin-bottom: 30px;
+}
+.content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* partie les cartes (service) 1 */
+
+.card {
+  background-color: #f8f3f3;
+  width: 40em;
+  justify-content: space-between;
+  align-items: center;
+  /* gap= un espacement entre les cartes */
+
+  gap: 20px;
+
+  /* (flex:1) chaque carte prend un espace égal */
+
+  flex: 1;
+  max-width: 500px;
+  box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
+  border-radius: 15px;
+  padding: 20px;
+  margin: 15px;
+  transition: 0.7s ease;
+}
+/* scale(1.1) signifie que l'élément est agrandi de 10% par rapport à sa taille d'origine.*/
+
+.card:hover {
+  transform: scale(1.1);
+}
+
+.icon {
+  color: #545557;
+  font-size: 6em;
+  text-align: center;
+}
+
+.info {
+  text-align: center;
+}
+
+.info h3 {
+  color: #b10000;
+  font-size: 1.2em;
+  font-weight: 700;
+  margin: 10px;
+}
+
+/* partie des projets */
+
+.projects {
+  background-color: #01030a;
+}
+
+.projects .content {
+  margin-top: 30px;
+}
+
+.projet-card {
+  background-color: #f0f0f0;
+  border: 1px solid #fff;
+  min-height: 14em;
+  width: 15em;
+  overflow: hidden;
+  border-radius: 15px;
+  margin: 25px;
+  margin-bottom: auto;
+  transition: 0.7s ease;
+}
+
+.projet-card:hover {
+  transform: scale(1.1);
+}
+
+.projet-card:hover .projet-image {
+  opacity: 0.9;
+}
+
+/* image 1 */
+
+.projet-image img {
+  width: 100%;
+}
+
+.project-info {
+  padding: 1em;
+}
+
+.project-category {
+  font-size: 0.8em;
+  color: #01030a;
+}
+
+.project-title {
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+  font-weight: 800;
+  margin-top: 10px;
+}
+
+.more-details {
+  text-decoration: none;
+  color: #b10000;
+}
+
+.more-details:hover {
+  color: #b10000;
+}
+
+/* partie contact */
+.contact {
+  display: flex;
+}
+.contact .icon {
+  font-size: 4.5em;
+}
+
+.contact .info h3 {
+  color: #01030a;
+}
+
+/* partie footer */
+
+.footer {
+  background-color: #01030a;
+  color: #fff;
+  padding: 1%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-title {
+  font-size: 1.3em;
+  font-weight: 600;
+}
+
+.footer-title span {
+  color: #b10000;
+}
+
+.footer .social-icons a {
+  padding: 0 12px 0 0;
+}
+
+/* La propriété @media permet de changer l'apparence d'un site web en fonction de l'appareil ou de la taille de l'écran.*/
+
+@media (max-width: 1023px) {
+  header {
+    padding: 12px 20px;
+  }
+
+  .navigation a {
+    padding-left: 10px;
+  }
+
+  .title {
+    font-size: 1.8em;
+  }
+
+  section {
+    padding: 80px 20px;
+  }
+
+  .main-content h2 {
+    font: size 1em;
+  }
+
+  .main-content h3 {
+    font-size: 1.6em;
+  }
+
+  .content {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 641px) {
+  body {
+    font-size: 12px;
+  }
+  .main-content h2 {
+    font-size: 0.8em;
+  }
+
+  .main-content h3 {
+    font-size: 1.4em;
+  }
+}
+
+@media (max-width: 300px) {
+  body {
+    font-size: 10px;
+  }
+}
